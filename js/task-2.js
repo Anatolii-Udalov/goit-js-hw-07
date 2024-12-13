@@ -25,4 +25,32 @@ const images = [
   }
 ];
 
-const galleryCardsArray = images.map((element => { }));
+const createGalleryImages = imagesInfo => {
+  //li
+  const galleryItemList = document.createElement('li');
+  galleryItemList.classList.add('gallery-item');
+  //a
+  const galleryLinkItem = document.createElement('a');
+  galleryLinkItem.href = '#';
+  galleryItemList.append(galleryLinkItem);
+  //img
+  const galleryListPicture = document.createElement('img');
+
+  galleryListPicture.src = imagesInfo.url;
+  galleryListPicture.alt = imagesInfo.alt;
+
+  galleryLinkItem.prepend(galleryListPicture);
+
+  return galleryItemList;
+
+};
+
+const finalImagesArray = images.map(image => createGalleryImages(image));
+
+
+
+const galleryListImages = document.querySelector('.gallery');
+galleryListImages.prepend(...finalImagesArray);
+
+
+

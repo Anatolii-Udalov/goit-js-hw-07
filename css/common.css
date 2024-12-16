@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  max-width: 1440px;
 }
 
 body {
@@ -11,4 +12,37 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+}
+
+/* task-1 */
+li {
+  list-style-type: none;
+}
+
+.item-list-first {
+  display: block;
+  margin-bottom: 8px;
+  border: #212121 solid 1px;
+  border-radius: 6px;
+  padding: 8px 0px 8px 16px;
+}
+
+
+/* task-2 */
+
+.gallery-item {
+  display: flex;
+  width: 300px;
+  gap: 24px 48px;
+}
+
+/* task-3 */
+#name-input {
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }

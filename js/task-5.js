@@ -7,7 +7,8 @@ btnChngColor.addEventListener('click', () => {
     .toString(16)
     .padStart(6, 0)}`;
 
-  spanChngColor.style.color = randomColor;
 
   bodyColor.style.backgroundColor = randomColor;
+  spanChngColor.textContent = randomColor;
+
 });
